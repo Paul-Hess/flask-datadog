@@ -25,4 +25,12 @@ You only need to import and initialize your app ::
     app.config['DATADOG_API_KEY']  = 'api_key'
     app.config['DATADOG_APP_KEY']  = 'app_key'
     statsd = StatsD(app)
-    dogapi = API(app)
+
+    # optional add automated request metrics to Flask lifecylce hooks
+    statsd.initialize_lifecycle_hooks()
+
+    # suggested add the client to app for ad-hoc metrics reporting
+    app.statsd = statsd
+
+    # ad-hoc usage example
+    current_app.statsd.count("metric.name", 1)

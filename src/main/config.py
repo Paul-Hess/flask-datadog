@@ -1,0 +1,16 @@
+
+DEFAULTS = {
+    "DATADOG_RESPONSE_SIZE_METRIC_NAME": "flask.response.size",
+    "DATADOG_RESPONSE_METRIC_NAME": "flask.response.time",
+    "DATADOG_RESPONSE_SAMPLE_RATE": 1,
+    "DATADOG_RESPONSE_AUTO_TAG": True,
+    "DATADOG_RESPONSE_ENDPOINT_TAG_NAME": "endpoint",
+    "DATADOG_RESPONSE_METHOD_TAG_NAME": "method",
+
+    "STATSD_HOST": 'localhost',
+    "STATSD_MAX_BUFFER_SIZE": 50,
+    "STATSD_NAMESPACE": None,
+    "STATSD_PORT": 8125,
+    "STATSD_TAGS": None,
+    "STATSD_USEMS": False,
+}
