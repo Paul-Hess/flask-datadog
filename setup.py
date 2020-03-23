@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, findall
 
 setup(
     name='Flask-Datadog',
@@ -8,7 +8,8 @@ setup(
     author='50onRed',
     author_email='marcus.mccurdy@gmail.com',
     description='Access to dogstatsd in your app.',
-    py_modules=['flask_datadog'],
+    package_dir={'': 'src/main/python'},
+    packages=findall('src/main/python'),
     zip_safe=False,
     include_package_data=True,
     platforms='any',
