@@ -4,7 +4,7 @@ from datadog.dogstatsd.base import DogStatsd
 from datadog.dogstatsd.context import TimedContextManagerDecorator
 from flask import g, request
 
-from src.main.config import DEFAULTS
+from config import DEFAULTS
 
 
 class TimerWrapper(TimedContextManagerDecorator):
